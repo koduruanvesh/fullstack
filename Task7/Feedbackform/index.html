@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        form {
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+        }
+
+        .highlight {
+            background-color: lightblue;
+        }
+    </style>
+
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+<h2 style="text-align:center;">Feedback Form</h2>
+
+<form>
+
+    Name:
+    <input type="text" id="name"
+        onkeyup="validateName()"
+        onmouseover="highlight(this)"
+        onmouseout="removeHighlight(this)">
+
+    Email:
+    <input type="text" id="email"
+        onkeyup="validateEmail()"
+        onmouseover="highlight(this)"
+        onmouseout="removeHighlight(this)">
+
+    Feedback:
+    <textarea id="feedback"
+        onmouseover="highlight(this)"
+        onmouseout="removeHighlight(this)"></textarea>
+
+    <button type="button" ondblclick="submitForm()">Submit</button>
+
+</form>
+
+</body>
+</html>
